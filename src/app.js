@@ -35,8 +35,6 @@ var HelloWorldLayer = cc.Layer.extend({
         //    you may modify it.
         // ask the window size
         var size = cc.winSize;
-        console.log(size);
-
         
         /////////////////////////////
         // 3. add your codes below...
@@ -46,7 +44,6 @@ var HelloWorldLayer = cc.Layer.extend({
         // position the label on the center of the screen
         helloLabel.x = size.width / 2;
         helloLabel.y = size.height / 2 + 200;
-        console.log(helloLabel.y);
         // add the label as a child to this layer
         this.addChild(helloLabel, 5);
 
