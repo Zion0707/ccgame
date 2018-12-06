@@ -26,6 +26,7 @@
 var HelloWorldLayer = cc.Layer.extend({
     sprite:null,
     ctor:function () {
+
         //////////////////////////////
         // 1. super init first
         this._super();
@@ -46,8 +47,7 @@ var HelloWorldLayer = cc.Layer.extend({
         helloLabel.y = size.height / 2 + 200;
         // add the label as a child to this layer
         this.addChild(helloLabel, 5);
-
-
+    
         // add "HelloWorld" splash screen"
         this.sprite = new cc.Sprite(res.HelloWorld_png);
         this.sprite.attr({
