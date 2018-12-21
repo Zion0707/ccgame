@@ -43,25 +43,35 @@ var HelloWorldLayer = cc.Layer.extend({
         // create and initialize a label
         var helloLabel = new cc.LabelTTF("Hello World", "Arial", 38);
         // position the label on the center of the screen
-        helloLabel.x = size.width / 2;
-        helloLabel.y = size.height / 2 + 200;
+        helloLabel.attr({
+            x: size.width / 2,
+            y: size.height / 2 + 200,
+            scale: 2
+        });
+        // helloLabel.setVisible(true);
+        helloLabel.setColor( cc.color(255, 100, 200) );
         // add the label as a child to this layer
         this.addChild(helloLabel, 5);
-    
+
+        
+        
+        
         // add "HelloWorld" splash screen"
-        this.sprite = new cc.Sprite(res.HelloWorld_png);
-        this.sprite.attr({
-            x: size.width / 2,
-            y: size.height / 2
-        });
-        this.addChild(this.sprite, 0);
+        // this.sprite = new cc.Sprite(res.HelloWorld_png);
+        // this.sprite.attr({
+        //     x: size.width / 2,
+        //     y: size.height / 2
+        // });
+        // this.addChild(this.sprite, 0);
 
         return true;
     }
 });
 
+
+//场景
 var HelloWorldScene = cc.Scene.extend({
-    onEnter:function () {
+    onEnter(){ //场景进入
         this._super();
         var layer = new HelloWorldLayer();
         this.addChild(layer);
